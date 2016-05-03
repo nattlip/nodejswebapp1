@@ -1,0 +1,227 @@
+﻿1.1.     0x1A, RFY (Somfy RTS)
+
+1.1.1.     0x00-0x01: RFY, RFY ext
+
+ 
+Used by: transmitter only
+struct {
+            BYTE packetlength;
+            BYTE packettype;
+            BYTE subtype;
+            BYTE seqnbr;
+            BYTE id1;
+            BYTE id2;
+            BYTE id3;
+			BYTE unitcode;
+            BYTE cmnd;
+            BYTE rfu1;
+            BYTE rfu2;
+            BYTE rfu3;
+            BYTE filler : 4;
+            BYTE rssi : 4;
+} RTS;
+ 
+packetlength:
+Packet length (this byte not included) = 0x0C
+ 
+packettype:
+0x1A = RFY
+ 
+subtype:
+0x00 = RFY
+0x01 = RFY ext (not yet fully implemented)
+ 
+seqnbr:
+Sequence number. This field contains a sequence number from 0x00 to 0xFF.
+ 
+id1 – id3:
+unit ID. (id1 is high byte)
+For subtype 0x00, 0x01:
+            The unit ID can be 0x0 00 01 to 0xF FF FF
+ 
+unitcode:
+For subtype 0x00:
+0x01 to 0x04 = unit 1 to 4
+0x00 = all units
+For subtype 0x01:
+0x00 to 0x0F = unit 0 to 15
+ 
+
+ 
+cmnd:
+ 
+subtype
+0x00
+stop
+0x00
+up
+0x01
+up + stop                        (Set Upper Limit)
+0x02
+down
+0x03
+down + stop                   (Set Lower Limit)
+0x04
+up + down                      (Connect motor)
+0x05
+List programmed remotes
+0x06
+Program
+0x07
+Program > 2 seconds
+0x08
+Program > 7 seconds
+0x09
+stop >2 seconds             (Set position / Change direction)
+0x0A
+stop >5 seconds             (Set middle position)
+0x0B
+up + down >5 seconds   (Change upper position)
+0x0C
+Erase this  RFY remote from the RFXtrx
+0x0D
+Erase all  RFY remotes from the RFXtrx
+0x0E
+Up < 0.5 seconds           (venetian US mode – Open)
+0x0F
+Down < 0.5 seconds      (venetian US mode – Close)
+0x10
+Up > 2 seconds             (venetian US mode – change angle +)
+0x11
+Down > 2 seconds        (venetian US mode – change angle -)
+0x12
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Up < 0.5 seconds           (venetian European mode –  change angle +)
+0x0F
+Down < 0.5 seconds      (venetian  European mode –  change angle -)
+0x10
+Up > 2 seconds             (venetian  European mode –  Open)
+0x11
+Down > 2 seconds        (venetian  European mode –  Close)
+0x12
+
+
+ 
+ 
+ 
+ 
+
+
+Enable sun+wind detector
+0x13
+Disable sun detector
+0x14
+ 
+ 
+ 
+Implement only the green commands in the application!!
+You can create 4 different devices:
+·         Motor control with: Up Stop Down Program
+
+·         Venetian (US mode) control with: Open Stop Close Angle+ Angle- Program
+
+·         Venetian (European mode) control with: Open Stop Close Angle+ Angle- Program
+
+·         Awning control with: Up, Stop, Down, Enable Sun sensor, Disable Sun sensor, Program
+
+ 
+It is advised to use the Somfy remote for the other commands.
+The two Erase commands can be performed using RFXmngr.
+ 
+rfu1-3:
+reserved for future use.
+ 
+rssi: (is 0x0 for transmitter command)
+Signal strength.
+0x0 to 0xF = weak to strong
+ 
+ 
+ 
+To pair the Somfy RTS device:
+Select a unique ID and unitcode for the RFXCOM RFY device.
+Disconnect power from all Somfy RTS devices except the device to pair.
+Press the Program button > 2 seconds on the original Somfy remote until the Somfy RTS device responds.
+Transmit the RFXCOM Program command. The Somfy RTS device should respond indicating the pair command was successful.
+ 
+The remote is registered in the RFXtrx433E by sending a Program or Up+Down command.
+Up to 40 remotes can be registered in the RFXtrx433E
+
+
+
+20609F38C7               A4-Off bits=32 
+20609F38C7               A4-Off bits=32 
+20609F38C7               A4-Off bits=32 
+20609F38C7               A4-Off bits=32 
+20609F38C7               A4-Off bits=32 
+20609F38C7               A4-Off bits=32 
+20609F38C7               A4-Off bits=32 
+20609F38C7               A4-Off bits=32 
+20609F38C7               A4-Off bits=32 
+20609F38C7               A4-Off bits=32 
+20609F18E7               A4-On bits=32 
+20609F18E7               A4-On bits=32 
+20609F18E7               A4-On bits=32 
+
+20609F18E7               A4-On bits=32 
+20708F18E7               B4-On bits=32 
+20708F18E7               B4-On bits=32 
+20708F18E7               B4-On bits=32 
+20708F18E7               B4-On bits=32 
+20708F18E7               B4-On bits=32 
+20708F38C7               B4-Off bits=32 
+20708F38C7               B4-Off bits=32 
+20708F38C7               B4-Off bits=32 
+20708F38C7               B4-Off bits=32 
+20708F38C7               B4-Off bits=32 
+
+
+
+20609F609F               A5-Off bits=32 
+20609F609F               A5-Off bits=32 
+20609F609F               A5-Off bits=32 
+20609F609F               A5-Off bits=32 
+20609F609F               A5-Off bits=32 
+20609F40BF               A5-On bits=32 
+20609F40BF               A5-On bits=32 
+20609F40BF               A5-On bits=32 
+20609F40BF               A5-On bits=32 
+20609F40BF               A5-On bits=32 
+
+20  609F00FF               A1-On bits=32 
+20  609F20DF               A1-Off bits=32 
+20  609F18E7               A4-On bits=32
+20  609F38C7               A4-Off bits=32
+20  609F40BF               A5-On bits=32 
+20  609F609F               A5-Off bits=32
+
+
+20  708F00FF               B1-On bits=32 
+20  708F20DF               B1-Off bits=32
+20  708F18E7               B4-On bits=32 
+20  708F38C7               B4-Off bits=32
+20  708F609F               B5-Off bits=32 
+20  708F40BF               B5-On bits=32 
+
+20  40BF00FF               C1-On bits=32 
+20  40BF20DF               C1-Off bits=32

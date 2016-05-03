@@ -1,0 +1,46 @@
+﻿ul#menu li {
+    display: inline;
+    position:relative;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li:hover {
+    background-color: orange;
+}
+
+ul#submenu1 li {
+    display: list-item;
+}
+
+/*http://stackoverflow.com/questions/21997728/horizontal-menu-with-vertical-submenu-html-css-only*/
+    ul#menu ul
+    {
+    display:none;
+    position:absolute;
+    left:-40px;
+    top:35px;
+    }
+
+     ul#menu li:hover ul {
+    display: block;
+    width:150px;
+    
+    }
+
+    ul#menu li:hover ul li a{
+    display: block;
+    color:red;
+    }
+
+ul#submenu1 li {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+

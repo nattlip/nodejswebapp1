@@ -1,0 +1,10 @@
+declare var device: any;
+declare function CreateTableFromServer(jsontable: string): void;
+declare var createselectelement: (id: any) => HTMLElement;
+declare var createbuttonelement: (buttonid: string, buttonval: string, buttonfunction: any, arg: any) => any;
+declare var createbutton3: (id: any, buttonid: string, buttonval: string, buttonfunction: any) => any;
+declare var getcomports1: (arg?: any) => void;
+declare var savedevice: (dev: any) => void;
+declare var deletdevice: () => void;
+declare var updatedevice: () => void;
+declare function CreateDeviceTableFromServer(jsontable: string): void;

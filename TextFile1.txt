@@ -1,0 +1,11 @@
+﻿python 7.6
+
+node.js 10.36
+socket.io
+sqlite3
+serialport
+rfxcom
+
+onclick="discoverlocalhuebridge()
+
+

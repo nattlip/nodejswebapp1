@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>NodejsWebApp1</Name>
+    <RootNamespace>NodejsWebApp1</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <NodeExeArguments>
+    </NodeExeArguments>
+    <EnvironmentVariables>
+    </EnvironmentVariables>
+    <ToolsVersionPromptShown>1.8</ToolsVersionPromptShown>
+    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>94796106-0906-4746-b2a9-64213459df0d</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Hueserver.js</StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>C:\Users\jilles\Documents\Visual Studio 2015\Projects\NodejsWebApp1\NodejsWebApp1</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="database" />
+    <Content Include="favicon.ico" />
+    <Content Include="HTML1.html" />
+    <Content Include="rfxcom\TextFile1.txt" />
+    <Content Include="Scripts\hue\images\bar-blue-bl.png" />
+    <Content Include="Scripts\hue\images\bar-blue-br.png" />
+    <Content Include="Scripts\hue\images\bar-blue-tl.png" />
+    <Content Include="Scripts\hue\images\bar-blue-tr.png" />
+    <Content Include="Scripts\hue\images\bar-brightness.png" />
+    <Content Include="Scripts\hue\images\bar-green-bl.png" />
+    <Content Include="Scripts\hue\images\bar-green-br.png" />
+    <Content Include="Scripts\hue\images\bar-green-tl.png" />
+    <Content Include="Scripts\hue\images\bar-green-tr.png" />
+    <Content Include="Scripts\hue\images\bar-hue.png" />
+    <Content Include="Scripts\hue\images\bar-red-bl.png" />
+    <Content Include="Scripts\hue\images\bar-red-br.png" />
+    <Content Include="Scripts\hue\images\bar-red-tl.png" />
+    <Content Include="Scripts\hue\images\bar-red-tr.png" />
+    <Content Include="Scripts\hue\images\bar-saturation.png" />
+    <Content Include="Scripts\hue\images\blank.gif" />
+    <Content Include="Scripts\hue\images\colormapfromcollorpicker.png" />
+    <Content Include="Scripts\hue\images\colormapjil.png" />
+    <Content Include="Scripts\hue\images\colorpicker_big.png" />
+    <Content Include="Scripts\hue\images\map-blue-max.png" />
+    <Content Include="Scripts\hue\images\map-blue-min.png" />
+    <Content Include="Scripts\hue\images\map-brightness.png" />
+    <Content Include="Scripts\hue\images\map-green-max.png" />
+    <Content Include="Scripts\hue\images\map-green-min.png" />
+    <Content Include="Scripts\hue\images\map-hue.png" />
+    <Content Include="Scripts\hue\images\map-red-max.png" />
+    <Content Include="Scripts\hue\images\map-red-min.png" />
+    <Content Include="Scripts\hue\images\map-saturation-overlay.png" />
+    <Content Include="Scripts\hue\images\map-saturation.png" />
+    <Content Include="Scripts\hue\images\mappoint.gif" />
+    <Content Include="Scripts\hue\images\notreachable.gif" />
+    <Content Include="Scripts\hue\images\rangearrows.gif" />
+    <Content Include="Scripts\hue\images\whitemapjil.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\index.html" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\jquery-ui.css" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\jquery-ui.min.css" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\jquery-ui.structure.css" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\jquery-ui.theme.css" />
+    <Content Include="Scripts\hue\jquery-ui-1.11.2.custom\jquery-ui.theme.min.css" />
+    <Content Include="styles\menustyles.css" />
+    <Content Include="styles\styles.css" />
+    <Content Include="TextFile1.txt" />
+    <TypeScriptCompile Include="app2.ts" />
+    <TypeScriptCompile Include="device.ts" />
+    <TypeScriptCompile Include="Domation.ts" />
+    <TypeScriptCompile Include="Hueserver.ts" />
+    <TypeScriptCompile Include="jillesrequestfile2.ts" />
+    <TypeScriptCompile Include="colorconverter2.ts" />
+    <TypeScriptCompile Include="jillesrfxcom.ts" />
+    <TypeScriptCompile Include="observe.ts" />
+    <TypeScriptCompile Include="Scripts\createtable.ts" />
+    <TypeScriptCompile Include="Scripts\hue\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\hue\jqueryui.d.ts" />
+    <TypeScriptCompile Include="Scripts\script2.ts">
+      <Publish>False</Publish>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <Content Include="oldscripts\index1.html" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <TypeScriptCompile Include="sqlite.ts" />
+    <TypeScriptCompile Include="bridgedatastore.ts" />
+    <TypeScriptCompile Include="createtableserverside.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="node_modules\" />
+    <Folder Include="rfxcom\" />
+    <Folder Include="Scripts\hue\" />
+    <Folder Include="Scripts\hue\jquery-ui-1.11.2.custom\" />
+    <Folder Include="Scripts\hue\jquery-ui-1.11.2.custom\external\" />
+    <Folder Include="Scripts\hue\jquery-ui-1.11.2.custom\external\jquery\" />
+    <Folder Include="Scripts\hue\jquery-ui-1.11.2.custom\images\" />
+    <Folder Include="Scripts\hue\images\" />
+    <Folder Include="styles\" />
+    <Folder Include="oldscripts\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\typings\" />
+    <Folder Include="Scripts\typings\node\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="rfxcom\curtain1.js" />
+    <Compile Include="rfxcom\defines.js" />
+    <Compile Include="rfxcom\index.js" />
+    <Compile Include="rfxcom\lighting1.js" />
+    <Compile Include="rfxcom\lighting2.js" />
+    <Compile Include="rfxcom\lighting5.js" />
+    <Compile Include="rfxcom\rfxcom.js" />
+    <Compile Include="rfxcom\serial.js" />
+    <Compile Include="Scripts\hue\canvaspoint2.ts" />
+    <Compile Include="Scripts\hue\canvaswhitemap.ts" />
+    <Compile Include="Scripts\hue\canvascolormap.ts" />
+    <Compile Include="Scripts\hue\canvascreatepage.ts" />
+    <Compile Include="Scripts\hue\colorconverter.ts" />
+    <Compile Include="Scripts\hue\jquery-1.11.1.min.js" />
+    <Compile Include="Scripts\hue\jquery-ui-1.11.2.custom\external\jquery\jquery.js" />
+    <Compile Include="Scripts\hue\jquery-ui-1.11.2.custom\jquery-ui.js" />
+    <Compile Include="Scripts\hue\jquery-ui-1.11.2.custom\jquery-ui.min.js" />
+    <Compile Include="Scripts\socket.io.js" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+  </PropertyGroup>
+</Project>

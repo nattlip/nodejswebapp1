@@ -1,0 +1,2 @@
+C:\Users\Jilles\Documents\Visual Studio 2015\Projects\NodejsWebApp1\NodejsWebApp1\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Jilles\Documents\Visual Studio 2015\Projects\NodejsWebApp1\NodejsWebApp1\obj\Debug\NodejsWebApp1.njsprojResolveAssemblyReference.cache
